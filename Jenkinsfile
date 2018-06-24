@@ -45,6 +45,11 @@ def notifySuccess() {
 	}
 
 
+node {
+	data = readYaml file: 'input.yaml'
+     }
+
+
 pipeline {
     agent any
 
@@ -62,6 +67,7 @@ pipeline {
 		      
 		     commitMessage = util.getCommitMessage()
 		     print ${commitMessage}
+		     print ${input.App.name}
 
 		}
 		}

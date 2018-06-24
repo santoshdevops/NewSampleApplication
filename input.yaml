@@ -1,5 +1,5 @@
 App:
-    - name: sampleapp
+    - name: sampleapp_test123_xyz
     - repo: sampleapp_repo
     - var1: value1
     - var2: value2

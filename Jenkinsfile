@@ -56,7 +56,7 @@ pipeline {
             steps {
 		script {
 		     echo "Print commit message from Shared Library ... "
-		     commitMessage = getCommitMessage()
+		     commitMessage = util.getCommitMessage()
 
 		}
 		}

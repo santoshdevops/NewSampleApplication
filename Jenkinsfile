@@ -48,6 +48,7 @@ def notifySuccess() {
 
 
 node {
+       checkout scm
 	data = readYaml file: 'input.yaml'
      }
 

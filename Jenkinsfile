@@ -67,6 +67,10 @@ pipeline {
 		      
 		     commitMessage = util.getCommitMessage()
 		     print data.App.name
+		     print data.App.name1.prop1
+		     print data.App.name1.prop2
+		     print data.App.name2.prop3
+		     print data.App.name2.prop4
 
 		}
 		}

@@ -8,6 +8,7 @@ import com.company.project.*
 def util = new com.company.project.util()
 
 
+
 def notifySuccess() {
 		emailext (
 			subject: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",

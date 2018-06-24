@@ -67,7 +67,7 @@ pipeline {
 		      
 		     commitMessage = util.getCommitMessage()
 		     print ${commitMessage}
-		     print ${input.App.name}
+		     print ${data.App.name}
 
 		}
 		}

@@ -1,6 +1,11 @@
 #!/bin/groovy
-	//import groovy.json.*
-	def notifySuccess() {
+
+
+@Library('jenkins-global-lib')
+
+import com.company.project.*
+
+def notifySuccess() {
 		emailext (
 			subject: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
 			body: '${JELLY_SCRIPT, template="html"}',

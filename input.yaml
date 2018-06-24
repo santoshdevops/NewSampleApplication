@@ -1,9 +1,4 @@
 App:
-    name: sampleapp_test123_xyz
-    repo: sampleapp_repo
-    var1: value1
-    var2: value2
-Artifactory:
-    apikey: "abc123"
-    host: "http://artifactory.url.com"
-    path: "snapshot-sampleapp"
+  name: sample_app_test_xyz_abc 
+  aaa: bbb
+  ddd: ccc

@@ -5,6 +5,9 @@
 
 import com.company.project.*
 
+def util = new com.company.project.util()
+
+
 def notifySuccess() {
 		emailext (
 			subject: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
@@ -56,6 +59,7 @@ pipeline {
             steps {
 		script {
 		     echo "Print commit message from Shared Library ... "
+		      
 		     commitMessage = util.getCommitMessage()
 
 		}

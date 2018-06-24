@@ -67,8 +67,7 @@ pipeline {
 		      
 		     commitMessage = util.getCommitMessage()
 		     print ${commitMessage}
-	        	data = readYaml file: 'input.yaml'
-		     print ${data.App.name}
+		     print data.App.name
 
 		}
 		}

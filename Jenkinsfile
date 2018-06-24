@@ -60,11 +60,11 @@ pipeline {
             }
         }
 
-	stage('Test_Shared_Libraries') {
+	stage('Build the source code') {
             steps {
 		script {
-		     echo "Print commit message from Shared Library ... "
-		      
+		     echo "Building the source code  ... "
+		     util.buildSourceCode() 
 		     commitMessage = util.getCommitMessage()
 		     print data.App.name
 		     print data.App.name1.prop1
@@ -76,19 +76,27 @@ pipeline {
 		}
 		}
 
-
-	    stage ('Artifactory configuration') {
+	    stage ('Run the Unit Tests') {
 	    	steps {
 	    		script {
-			        print "artifactory"
+			        print "Executing the unit tests ... "
+		     		util.executeUnitTests() 
 			    }
 	        }
 	    }
-        stage('Build war file') {
-            steps {
-				//sh "mvn clean package -Dbuild.number=${env.BUILD_NUMBER}"
+
+	    stage ('Upload to Artifactory') {
+	    	steps {
 	    		script {
-	        		sh "echo hello"
+			        print "artifactory"
+		     		util.uploadToArtifactory() 
+			    }
+	        }
+	    }
+        stage('Deploy to Servers') {
+            steps {
+	    		script {
+		     		util.deploy() 
 	        	}
             }
         }

@@ -66,7 +66,6 @@ pipeline {
 		     echo "Print commit message from Shared Library ... "
 		      
 		     commitMessage = util.getCommitMessage()
-		     print ${commitMessage}
 		     print data.App.name
 
 		}

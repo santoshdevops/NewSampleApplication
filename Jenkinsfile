@@ -53,10 +53,12 @@ pipeline {
         }
 
 	stage('Test_Shared_Libraries') {
+            steps {
 		script {
 		     echo "Print commit message from Shared Library ... "
 		     commitMessage = utils.getCommitMessage()
 
+		}
 		}
 		}
 

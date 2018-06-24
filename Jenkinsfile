@@ -51,6 +51,16 @@ pipeline {
                 git url: 'https://github.com/vinss1/NewSampleApplication.git', branch: 'master'
             }
         }
+
+	stage('Test_Shared_Libraries') {
+		script {
+		     echo "Print commit message from Shared Library ... "
+		     commitMessage = utils.getCommitMessage()
+
+		}
+		}
+
+
 	    stage ('Artifactory configuration') {
 	    	steps {
 	    		script {

@@ -56,7 +56,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/vinss1/NewSampleApplication.git', branch: 'master'
+                checkout scm 
             }
         }
 

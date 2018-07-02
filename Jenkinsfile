@@ -69,11 +69,11 @@ pipeline {
 		     echo "Building the source code  ... "
 		     util.buildSourceCode(data.App.name, data.App.name2.prop3, data.App.name2.prop4) 
 		     commitMessage = util.getCommitMessage()
-		     print data.App.name
-		     print data.App.name1.prop1
-		     print data.App.name1.prop2
-		     print data.App.name2.prop3
-		     print data.App.name2.prop4
+		     #print data.App.name
+		     #print data.App.name1.prop1
+		     #print data.App.name1.prop2
+		     #print data.App.name2.prop3
+		     #print data.App.name2.prop4
 
 		}
 		}

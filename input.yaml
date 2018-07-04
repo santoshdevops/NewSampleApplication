@@ -2,9 +2,9 @@ App:
   name: WebApplication1.sln
   repo: WebApplication1
   package: WebApplication1.zip
-  solution_file: "C:\WebApplication1\WebApplication1.sln"
-  project_file: "C:\WebApplication1\WebApplication1.csproj"
-  app_dir: "C:\WebApplication1"
+  solution_file: C:\WebApplication1\WebApplication1.sln
+  project_file: C:\WebApplication1\WebApplication1.csproj
+  app_dir: C:\WebApplication1
   name1:
     prop1: prop1
     prop2: prop2

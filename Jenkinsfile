@@ -67,7 +67,7 @@ pipeline {
             steps {
 		script {
 		     echo "Building the source code  ... "
-		     util.buildSourceCode(data.App.name, data.App.name2.prop3, data.App.name2.prop4) 
+		     util.buildSourceCode(data.App.solution_file, data.App.project_file, data.App.app_dir) 
 		     commitMessage = util.getCommitMessage()
 
 		}

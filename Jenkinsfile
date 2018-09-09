@@ -28,12 +28,12 @@ public void testLoadFromString() {
 public void testLoadFromStream() throws FileNotFoundException {
     InputStream input = new FileInputStream(new File("input.yaml"));
     Yaml yaml = new Yaml();
-    Object data = yaml.load(input);
-		for (Object data : yaml.loadAll(input)) {
-				assertNotNull(data);
-				assertTrue(data.toString().length() > 1);
+    Object data1 = yaml.load(input);
+		for (Object data1 : yaml.loadAll(input)) {
+				assertNotNull(data1);
+				assertTrue(data1.toString().length() > 1);
 				counter++;
-				print data
+				print data1
 		}
 		input.close()
 }

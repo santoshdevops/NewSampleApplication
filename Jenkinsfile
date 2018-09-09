@@ -78,11 +78,12 @@ pipeline {
             steps {
 		script {
 		     echo "Building the source code  ... "
-				// data = readYaml file: 'input.yaml'
+				 data = readYaml file: 'input.yaml'
 				 Yaml parser = new Yaml()
          List example = parser.load(("input" as File).text)
+         print example
 
-         example.each{println it.subject}
+        // example.each{println it.subject}
 
 				 print data.App.name1.prop1
 				 print data.App.name1.prop2

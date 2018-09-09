@@ -26,14 +26,20 @@ public void testLoadFromString() {
 }
 
 public void testLoadFromStream() throws FileNotFoundException {
-    InputStream input = new FileInputStream(new File("src/test/resources/reader/utf-8.txt"));
+    InputStream input = new FileInputStream(new File("input.yaml"));
     Yaml yaml = new Yaml();
     Object data = yaml.load(input);
-    assertEquals("test", data);
-    //
-    data = yaml.load(new ByteArrayInputStream("test2".getBytes()));
-    assertEquals("test2", data);
+		for (Object data : yaml.loadAll(input)) {
+				assertNotNull(data);
+				assertTrue(data.toString().length() > 1);
+				counter++;
+				print data
+		}
+		input.close()
 }
+
+
+
 
 
 def notifySuccess() {

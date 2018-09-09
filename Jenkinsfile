@@ -16,7 +16,24 @@ import org.yaml.snakeyaml.Yaml;
 
 def util = new com.company.project.util()
 
-Yaml yaml = new Yaml();
+
+public void testLoadFromString() {
+    Yaml yaml = new Yaml();
+    String document = "hello: 25";
+    Map map = (Map) yaml.load(document);
+    assertEquals("{hello=25}", map.toString());
+    assertEquals(new Long(25), map.get("hello"));
+}
+
+public void testLoadFromStream() throws FileNotFoundException {
+    InputStream input = new FileInputStream(new File("src/test/resources/reader/utf-8.txt"));
+    Yaml yaml = new Yaml();
+    Object data = yaml.load(input);
+    assertEquals("test", data);
+    //
+    data = yaml.load(new ByteArrayInputStream("test2".getBytes()));
+    assertEquals("test2", data);
+}
 
 
 def notifySuccess() {

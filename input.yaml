@@ -11,3 +11,6 @@ App:
   name2:
     prop3: prop3
     prop4: prop4
+  name3:
+    prop5: prop3
+    prop6: prop4

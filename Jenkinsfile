@@ -86,6 +86,12 @@ pipeline {
 				 print data.App.name2.prop4
 				 print data.App.name3.prop5
 				 print data.App.name3.prop6
+         print "Hello"
+		     print data.App.toString()
+
+
+
+
 
 
 

@@ -16,7 +16,7 @@ import org.yaml.snakeyaml.Yaml;
 
 def util = new com.company.project.util()
 
-
+Yaml yaml = new Yaml();
 
 
 def notifySuccess() {

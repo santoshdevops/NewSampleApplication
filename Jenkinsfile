@@ -49,7 +49,6 @@ def notifySuccess() {
 
 node {
        checkout scm
-	data = readYaml file: 'input.yaml'
      }
 
 
@@ -67,12 +66,18 @@ pipeline {
             steps {
 		script {
 		     echo "Building the source code  ... "
+				 data = readYaml file: 'input.yaml'
 				 print data.App.name1.prop1
 				 print data.App.name1.prop2
 				 print data.App.name2.prop3
 				 print data.App.name2.prop4
 				 print data.App.name3.prop5
-				 print data.App.name3.prop6 
+				 print data.App.name3.prop6
+		
+
+
+
+
 
 
 		     util.buildSourceCode(data.App.solution_file, data.App.project_file, data.App.app_dir)

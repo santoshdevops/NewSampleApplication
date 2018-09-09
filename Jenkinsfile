@@ -17,26 +17,6 @@ import org.yaml.snakeyaml.Yaml;
 def util = new com.company.project.util()
 
 
-public void testLoadFromString() {
-    Yaml yaml = new Yaml();
-    String document = "hello: 25";
-    Map map = (Map) yaml.load(document);
-    assertEquals("{hello=25}", map.toString());
-    assertEquals(new Long(25), map.get("hello"));
-}
-
-public void testLoadFromStream() throws FileNotFoundException {
-    InputStream input = new FileInputStream(new File("input.yaml"));
-    Yaml yaml = new Yaml();
-    Object data1 = yaml.load(input);
-		for (Object data1 : yaml.loadAll(input)) {
-				assertNotNull(data1);
-				assertTrue(data1.toString().length() > 1);
-				counter++;
-				print data1
-		}
-		input.close()
-}
 
 
 
@@ -105,6 +85,15 @@ pipeline {
 				 print data.App.name2.prop4
 				 print data.App.name3.prop5
 				 print data.App.name3.prop6
+
+				 Yaml parser = new Yaml()
+         List example = parser.load(("input" as File).text)
+
+         example.each{println it.subject}
+
+
+
+
 	//			 @Grab(group='org.yaml', module='snakeyaml', version='1.13')
 
 		   //  for(entry in data."${componentname}")

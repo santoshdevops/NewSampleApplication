@@ -73,7 +73,11 @@ pipeline {
 				 print data.App.name2.prop4
 				 print data.App.name3.prop5
 				 print data.App.name3.prop6
-		
+		     for entry in data."${componentname}"
+				 {
+					 print $entry 
+				 }
+
 
 
 

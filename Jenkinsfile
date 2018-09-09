@@ -4,6 +4,10 @@
 @Library('jenkins-global-lib')
 
 import com.company.project.*
+import org.yaml.snakeyaml.TypeDescription
+import org.yaml.snakeyaml.Yaml
+import org.yaml.snakeyaml.constructor.Constructor
+import org.yaml.snakeyaml.nodes.Tag
 
 def util = new com.company.project.util()
 

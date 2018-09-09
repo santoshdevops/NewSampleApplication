@@ -15,9 +15,9 @@ def notifySuccess() {
 			subject: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
 			body: '${JELLY_SCRIPT, template="html"}',
 			mimeType: 'text/html',
-			to: "santoshdevops@company.com",
+			to: "santosh.devops1@gmail.com",
 			from: "DevOps COE <devops.local.smtp@gmail.com>",
-			replyTo: "santoshdevops@company.com",
+			replyTo: "santosh.devops1@gmail.com",
 			//recipientProviders: [[$class: 'DevelopersRecipientProvider']]
 		)
 	}
@@ -27,9 +27,9 @@ def notifySuccess() {
 			subject: "Failure: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
 			body: '${JELLY_SCRIPT, template="html"}',
 			mimeType: 'text/html',
-			to: "santoshdevops@company.com",
+			to: "santosh.devops1@gmail.com",
 			from: "DevOps COE <devops.local.smtp@gmail.com>",
-			replyTo: "santoshdevops@company.com",
+			replyTo: "santosh.devops1@gmail.com",
 			//recipientProviders: [[$class: 'DevelopersRecipientProvider']]
 		)
 	}
@@ -39,9 +39,9 @@ def notifySuccess() {
 			subject: "Build Release: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
 			body: "URL: $artifactUrl",
 			mimeType: 'text/html',
-			to: "santoshdevops@company.com",
+			to: "santosh.devops1@gmail.com",
 			from: "DevOps COE <devops.local.smtp@gmail.com>",
-			replyTo: "santoshdevops@company.com",
+			replyTo: "santosh.devops1@gmail.com",
 			//recipientProviders: [[$class: 'DevelopersRecipientProvider']]
 		)
 	}

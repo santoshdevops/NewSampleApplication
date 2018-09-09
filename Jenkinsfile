@@ -77,7 +77,7 @@ pipeline {
 				 print data.App.name2.prop4
 				 print data.App.name3.prop5
 				 print data.App.name3.prop6
-				 @Grab(group='org.yaml', module='snakeyaml', version='1.13')
+	//			 @Grab(group='org.yaml', module='snakeyaml', version='1.13')
 
 		   //  for(entry in data."${componentname}")
 				 //{

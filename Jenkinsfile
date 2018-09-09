@@ -9,6 +9,27 @@ import org.yaml.snakeyaml.Yaml
 import org.yaml.snakeyaml.constructor.Constructor
 import org.yaml.snakeyaml.nodes.Tag
 
+
+
+
+import org.yaml.snakeyaml.Yaml;
+
+public class YamlConfigRunner {
+    public static void main(String[] args) throws IOException {
+        if( args.length != 1 ) {
+            System.out.println( "Usage: <file.yml>" );
+            return;
+        }
+
+        Yaml yaml = new Yaml();
+        try( InputStream in = Files.newInputStream( Paths.get( args[ 0 ] ) ) ) {
+            Configuration config = yaml.loadAs( in, Configuration.class );
+            System.out.println( config.toString() );
+        }
+    }
+}
+
+
 def util = new com.company.project.util()
 
 

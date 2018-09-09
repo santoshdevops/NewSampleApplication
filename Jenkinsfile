@@ -120,7 +120,8 @@ pipeline {
 	post {
         failure {
         	script {
-        		notifyFailure()
+        	print "mail"
+					//notifyFailure()
         	}
         }
     }

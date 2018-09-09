@@ -73,15 +73,12 @@ pipeline {
 				 print data.App.name2.prop4
 				 print data.App.name3.prop5
 				 print data.App.name3.prop6
-		     for(entry in data."${componentname}")
-				 {
-					 print $entry
-				 }
+				 @Grab(group='org.yaml', module='snakeyaml', version='1.13')
 
-
-
-
-
+		   //  for(entry in data."${componentname}")
+				 //{
+					 //print $entry
+				 //}
 
 
 		     util.buildSourceCode(data.App.solution_file, data.App.project_file, data.App.app_dir)

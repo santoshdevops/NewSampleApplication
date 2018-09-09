@@ -79,11 +79,6 @@ pipeline {
 		script {
 		     echo "Building the source code  ... "
 				 data = readYaml file: 'input.yaml'
-				 Yaml parser = new Yaml()
-         List example = parser.load(("input" as File).text)
-         print example
-
-        // example.each{println it.subject}
 
 				 print data.App.name1.prop1
 				 print data.App.name1.prop2
@@ -91,8 +86,6 @@ pipeline {
 				 print data.App.name2.prop4
 				 print data.App.name3.prop5
 				 print data.App.name3.prop6
-
-
 
 
 

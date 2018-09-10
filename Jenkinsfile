@@ -89,8 +89,7 @@ pipeline {
          print "Hello"
 		     print data.App.toString()
 				 print data.App
-				 
-
+				 println data.App(',')
 
 
 

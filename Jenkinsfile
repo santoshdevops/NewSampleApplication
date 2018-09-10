@@ -88,6 +88,9 @@ pipeline {
 				 print data.App.name3.prop6
          print "Hello"
 		     print data.App.toString()
+				 print data.App
+				 
+
 
 
 

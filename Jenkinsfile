@@ -59,7 +59,7 @@ def notifySuccess() {
 	}
 
 
-	public static void main(String[] args) throws FileNotFoundException {
+	def function1(String[] args) throws FileNotFoundException {
 	    Yaml yaml = new Yaml();
 	    Reader yamlFile = new FileReader("./input.yaml");
 
@@ -145,6 +145,7 @@ pipeline {
 	    	steps {
 	    		script {
 			        print "Executing the unit tests ... "
+							function1()
 		     		util.executeUnitTests()
 			    }
 	        }

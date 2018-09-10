@@ -61,7 +61,7 @@ def notifySuccess() {
 
 	def function1(String[] args) throws FileNotFoundException {
 	    Yaml yaml = new Yaml();
-	    Reader yamlFile = new FileReader("./input.yaml");
+	    Reader yamlFile = new FileReader("./input1.yaml");
 
 	    Map<String , Object> yamlMaps = (Map<String, Object>) yaml.load(yamlFile);
 

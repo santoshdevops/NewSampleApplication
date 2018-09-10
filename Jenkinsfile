@@ -59,6 +59,22 @@ def notifySuccess() {
 	}
 
 
+	public static void main(String[] args) throws FileNotFoundException {
+	    Yaml yaml = new Yaml();
+	    Reader yamlFile = new FileReader("./input.yaml");
+
+	    Map<String , Object> yamlMaps = (Map<String, Object>) yaml.load(yamlFile);
+
+	    System.out.println(yamlMaps.get("App"));
+	    final List<Map<String, Object>> module_name = (List<Map<String, Object>>) yamlMaps.get("components");
+	    System.out.println(components);
+	    System.out.println(components.get(0).get("prop1"));
+	    System.out.println(components.get(1).get("prop1"));
+	}
+
+
+
+
 node {
        checkout scm
      }
@@ -89,7 +105,20 @@ pipeline {
          print "Hello"
 		     print data.App.toString()
 				 print data.App
-				 println data.App(',')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

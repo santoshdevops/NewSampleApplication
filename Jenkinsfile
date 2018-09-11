@@ -118,7 +118,7 @@ pipeline {
 
 
 
-         data123 = convertToJson(./input.yml)
+         data123 = convertToJson("input.yml")
 				 print data123
 
 

@@ -63,6 +63,7 @@ def notifySuccess() {
 	    Yaml yaml = new Yaml();
 	    Reader yamlFile = new FileReader("./input1.yaml");
 
+
 	    Map<String , Object> yamlMaps = (Map<String, Object>) yaml.load(yamlFile);
 
 	    System.out.println(yamlMaps.get("App"));
@@ -71,6 +72,15 @@ def notifySuccess() {
 	    System.out.println(components.get(0).get("prop1"));
 	    System.out.println(components.get(1).get("prop1"));
 	}
+
+
+
+	private static String convertToJson(String yamlString) {
+    Yaml yaml= new Yaml();
+    Object obj = yaml.load(yamlString);
+
+    return JSONValue.toJSONString(obj);
+}
 
 
 
@@ -108,6 +118,8 @@ pipeline {
 
 
 
+         data123 = convertToJson(./input.yml)
+				 print data123
 
 
 

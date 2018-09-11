@@ -1,23 +1,38 @@
 {
-  name=WebApplication1.sln,
-  repo=WebApplication1,
-  package=WebApplication1.zip,
-  solution_file=C:\WebApplication1\WebApplication1.sln,
-  project_file=C:\WebApplication1\WebApplication1.csproj,
-  app_dir=C:\WebApplication1,
-  name1=
-    {
-      prop1=prop1,
-      prop2=prop2
-      },
-  name2=
-  {
-    prop3=prop3,
-    prop4=prop4
-    },
-  name3=
-  {
-    prop5=prop5,
-    prop6=prop6
+    "quiz": {
+        "sport": {
+            "q1": {
+                "question": "Which one is correct team name in NBA?",
+                "options": [
+                    "New York Bulls",
+                    "Los Angeles Kings",
+                    "Golden State Warriros",
+                    "Huston Rocket"
+                ],
+                "answer": "Huston Rocket"
+            }
+        },
+        "maths": {
+            "q1": {
+                "question": "5 + 7 = ?",
+                "options": [
+                    "10",
+                    "11",
+                    "12",
+                    "13"
+                ],
+                "answer": "12"
+            },
+            "q2": {
+                "question": "12 - 8 = ?",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "answer": "4"
+            }
+        }
     }
-  }
+}

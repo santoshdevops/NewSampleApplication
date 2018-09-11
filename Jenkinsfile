@@ -9,17 +9,11 @@ import org.yaml.snakeyaml.Yaml
 import org.yaml.snakeyaml.constructor.Constructor
 import org.yaml.snakeyaml.nodes.Tag
 
-
-
 import org.yaml.snakeyaml.Yaml;
+import org.json.simple.JSONValue;
 
 
 def util = new com.company.project.util()
-
-
-
-
-
 
 
 def notifySuccess() {
@@ -78,7 +72,6 @@ def notifySuccess() {
 	private static String convertToJson(String yamlString) {
     Yaml yaml= new Yaml();
     Object obj = yaml.load(yamlString);
-
     return JSONValue.toJSONString(obj);
 }
 
